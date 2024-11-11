@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <title>Content Randomizer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            text-align: center;
+            padding: 50px;
+            color: #333;
+        }
+        h1 {
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .idea {
+            font-size: 28px;
+            color: #ff4500;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Content Idea Generator</h1>
+    <div class="idea" id="idea">Click the button to generate a new idea!</div>
+    <button onclick="generateIdea()">Generate New Idea</button>
+
+    <script>
+        const categories1 = [
+            "Travel", "Food", "Fitness", "Fashion", "Technology", "Nature", "Art", "Music", "Photography", "Sports",
+            "Health", "Education", "Science", "History", "Culture", "Lifestyle", "DIY", "Gaming", "Finance", "Business",
+            "Cooking", "Gardening", "Pets", "Parenting", "Beauty", "Wellness", "Books", "Movies", "TV Shows", "Theater",
+            "Crafts", "Automotive", "Real Estate", "Marketing", "Entrepreneurship", "Social Media", "Environment", "Politics", "Relationships", "Travel Tips"
+        ];
+        const categories2 = [
+            "Review", "Unbox", "Tutorial", "Behind-the-Scenes", "Challenge", "Interview", "Vlog", "Live Stream", "Q&A",
+            "Storytime", "Collaboration", "Giveaway", "Announcement", "Event Coverage", "Product Launch", "Tips & Tricks",
+            "Day in the Life", "Transformation", "Motivation", "Inspiration", "Recipe", "Workout", "Travel Guide", "Book Review",
+            "Movie Review", "TV Show Recap", "DIY Project", "Pet Care Tips", "Parenting Advice", "Beauty Routine", "Wellness Tips",
+            "Book Club", "Movie Night", "TV Show Discussion", "Craft Tutorial", "Car Maintenance", "Real Estate Tips", "Marketing Strategy", "Entrepreneurship Journey"
+        ];
+
+        function generateIdea() {
+            const category1 = categories1[Math.floor(Math.random() * categories1.length)];
+            const category2 = categories2[Math.floor(Math.random() * categories2.length)];
+            document.getElementById('idea').innerText = `${category1} + ${category2}`;
+        }
+    </script>
+</body>
+</html>
